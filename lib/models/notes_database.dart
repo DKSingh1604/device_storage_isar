@@ -1,8 +1,9 @@
 import 'package:device_storage_isar/models/notes.dart';
+import 'package:flutter/material.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
-class NotesDatabase {
+class NotesDatabase extends ChangeNotifier {
   static late Isar isar;
   //INITIALIZE DATABASE
 
@@ -33,6 +34,7 @@ class NotesDatabase {
     List<Notes> fetchNotes = await isar.notes.where().findAll();
     currentNotes.clear();
     currentNotes.addAll(fetchNotes);
+    notifyListeners();
   }
 
   //UPDATE - notes from db
