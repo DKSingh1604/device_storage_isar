@@ -18,7 +18,7 @@ class NotesDatabase extends ChangeNotifier {
   //list of notes
   final List<Notes> currentNotes = [];
 
-  //CREATE - a note and save to db
+  //CREATE - note and save to db
   Future<void> addNote(String textFromUser) async {
     //create a new note object
     final newNote = Notes()..text = textFromUser;
