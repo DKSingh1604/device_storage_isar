@@ -13,7 +13,7 @@ class NotesPage extends StatefulWidget {
 }
 
 class _NotesPageState extends State<NotesPage> {
-  //text controller to access what the user typed
+  //text controller
   final textController = TextEditingController();
 
   @override
