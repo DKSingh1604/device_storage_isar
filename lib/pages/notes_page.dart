@@ -80,13 +80,13 @@ class _NotesPageState extends State<NotesPage> {
           controller: textController,
         ),
         actions: [
-          //cancel button
+          //cancel
           MaterialButton(
             child: Text("Cancel"),
             onPressed: () => Navigator.of(context).pop(),
           ),
 
-          //update button
+          //update
           MaterialButton(
             child: Text("Update"),
             onPressed: () {
